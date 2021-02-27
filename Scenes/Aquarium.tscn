@@ -5,5 +5,6 @@
 [node name="Aquarium" type="Node2D"]
 
 [node name="underwater-aquarium-scene-5421127" type="Sprite" parent="."]
-position = Vector2( 400, 269 )
+position = Vector2( 511.396, 299.86 )
+scale = Vector2( 1.12506, 1.12506 )
 texture = ExtResource( 1 )
