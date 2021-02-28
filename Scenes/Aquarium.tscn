@@ -3,7 +3,8 @@
 [ext_resource path="res://Assets/img/underwater-aquarium-scene-5421127.jpg" type="Texture" id=1]
 
 [node name="Aquarium" type="Node2D"]
+position = Vector2( -2, 0 )
 
 [node name="underwater-aquarium-scene-5421127" type="Sprite" parent="."]
-position = Vector2( 400, 269 )
+position = Vector2( 402, 269 )
 texture = ExtResource( 1 )
