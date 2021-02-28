@@ -10,10 +10,10 @@ func _physics_process(delta):
 		pass
 	elif state == 1:
 		motion.x = 50
-		motion.y = -10
+		motion.y = -20
 	elif state == 2:
 		motion.x = -50
-		motion.y = -10
+		motion.y = -20
 
 	move_and_slide(motion, Vector2(0, -1))
 
