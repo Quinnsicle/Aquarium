@@ -16,7 +16,9 @@ const UNDERWATER = 10.0
 var velocity = Vector2()
 
 func _physics_process(delta):
+	velocity.y = 80; 
 	velocity.y += (delta * GRAVITY) / UNDERWATER
+	
 
 	var motion = velocity * delta
 	move_and_collide(motion)
