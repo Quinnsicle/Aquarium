@@ -8,6 +8,11 @@ func _ready():
 
 
 func _process(delta):
+	if Input.is_action_just_pressed("pop_bubble"):
+		var bubble_scene = load("res://Scenes/Bubble.tscn")
+		var bubble_spawn = bubble_scene.instance()
+		get_parent().remove_child(bubble_spawn)
+		
 		# Spawn food on left click
 	if Input.is_action_just_pressed("spawn_food"):
 		var scene = load("res://Scenes/Food.tscn")
@@ -17,10 +22,15 @@ func _process(delta):
 		food.position = mouse_position
 		add_child(food)
 		
+
+			
+		
+	
+		
 	
 
 
-func _on_Timer_timeout():
+func _on_Timer_timeout(): 
 	var rand = RandomNumberGenerator.new()
 	var screen_size = get_viewport().get_visible_rect().size
 	var bubble_scene = load("res://Scenes/Bubble.tscn")
