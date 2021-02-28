@@ -4,9 +4,16 @@
 [ext_resource path="res://Scripts/Aquarium.gd" type="Script" id=2]
 
 [node name="Aquarium" type="Node2D"]
+<<<<<<< HEAD
+position = Vector2( -2, 0 )
+
+[node name="underwater-aquarium-scene-5421127" type="Sprite" parent="."]
+position = Vector2( 402, 269 )
+=======
 script = ExtResource( 2 )
 
 [node name="underwater-aquarium-scene-5421127" type="Sprite" parent="."]
 position = Vector2( 511.396, 299.86 )
 scale = Vector2( 1.12506, 1.12506 )
+>>>>>>> master
 texture = ExtResource( 1 )
