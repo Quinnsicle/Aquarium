@@ -1,5 +1,7 @@
 # ignore these files
 
-.mono/metadata/
+.mono
 .import
 *.import
+
+>>>>>>> origin/master
