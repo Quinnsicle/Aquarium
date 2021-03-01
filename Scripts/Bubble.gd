@@ -2,10 +2,10 @@ extends KinematicBody2D
 
 var motion = Vector2()
 var state = 0
-var velocity = Vector2()
 #0 for nothing, 1=right, 2=left
 	
 func _physics_process(delta):
+	motion.y = -20
 	
 	if state == 0:
 		pass
@@ -17,19 +17,15 @@ func _physics_process(delta):
 		motion.y = -20
 
 	move_and_slide(motion, Vector2(0, -1))
-	
-	#velocity = move_and_slide(velocity)
-	#for i in get_slide_count():
-		#var collision = get_slide_collision(i)
-		#print("Collision", collision.collider.name);
 		
 	if is_on_ceiling():
 		var timer = Timer.new()
 		self.add_child(timer)
 		$AnimatedSprite.play("pop")
-		
+		motion.y = 0
+		motion.x = 0
 		timer.connect("timeout", self, "queue_free")
-		timer.set_wait_time(.8)
+		timer.set_wait_time(.1)
 		timer.start()
 		
 	
