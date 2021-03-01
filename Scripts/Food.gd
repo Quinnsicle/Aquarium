@@ -35,3 +35,6 @@ func _physics_process(delta):
 		
 		#queue_free()
 	#translate(motion)
+
+func eaten():
+	queue_free()

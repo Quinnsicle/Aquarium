@@ -27,7 +27,7 @@ func _physics_process(delta):
 		timer.connect("timeout", self, "queue_free")
 		timer.set_wait_time(.1)
 		timer.start()
-		
+
 
 
 func _on_Timer_timeout():
