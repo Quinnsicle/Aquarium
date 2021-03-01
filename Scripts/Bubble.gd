@@ -32,9 +32,12 @@ func _physics_process(delta):
 		timer.set_wait_time(.8)
 		timer.start()
 		
+	
+	if is_on_ceiling():
+		queue_free()
 
 
 func _on_Timer_timeout():
 	state = floor(rand_range(0,3))
-	#print(state)
+	print(state)
 	pass # Replace with function body.
