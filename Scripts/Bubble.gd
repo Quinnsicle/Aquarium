@@ -35,5 +35,5 @@ func _physics_process(delta):
 
 func _on_Timer_timeout():
 	state = floor(rand_range(0,3))
-	print(state)
+	#print(state)
 	pass # Replace with function body.
