@@ -4,7 +4,7 @@ enum states {ROAM, HUNGRY, EAT, DEAD}
 var state = states.ROAM
 
 var anim_state
-var speed = 25
+var speed = 250
 var in_action = false
 
 # For roaming
@@ -39,11 +39,13 @@ func _process(delta):
 	#velocity = move_and_slide(velocity * delta)
 
 func _physics_process(delta):
-	if((self.get_position() - move_target).length() > 0.2):
+	if((self.get_position() - move_target).length() > 5):
+		# not at target destination, lerp there
 		t += delta / speed
-		print(position)
 		position = position.linear_interpolate(move_target, t)
-		#self.move_and_slide(move_target * speed * delta)
+	else:
+		# at target destination, choose another action
+		choose_action()
 
 func choose_action():
 	print("choose action")
@@ -68,8 +70,7 @@ func choose_action():
 			move_target.x = rand.randf_range(0, screen_size.x)
 			move_target.y = rand.randf_range(0, screen_size.y)
 			print("roam to (", move_target.x, move_target.y, ")")
-			velocity = velocity.move_toward(move_target, speed)
-			print(velocity)
+			t = 0
 			#tween.interpolate_property(self, "position", self.position, move_target, 8, Tween.TRANS_EXPO, Tween.EASE_IN_OUT)
 
 
