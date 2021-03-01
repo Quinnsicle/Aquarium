@@ -2,7 +2,7 @@
 
 [ext_resource path="res://Assets/img/Aquarium.jpg" type="Texture" id=1]
 [ext_resource path="res://Scripts/Aquarium.gd" type="Script" id=2]
-[ext_resource path="res://Scenes/Outside.gd" type="Script" id=3]
+[ext_resource path="res://Scripts/Outside.gd" type="Script" id=3]
 
 [node name="Aquarium" type="Node2D"]
 script = ExtResource( 2 )
