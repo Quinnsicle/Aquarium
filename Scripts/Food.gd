@@ -35,3 +35,10 @@ func _physics_process(delta):
 		
 		#queue_free()
 	#translate(motion)
+
+func eaten():
+	queue_free()
+
+
+func _on_Food_ready():
+	pass # Replace with function body.

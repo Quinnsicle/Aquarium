@@ -2,16 +2,19 @@ extends Node
 
 
 func _ready():
+	var fish_scene = load("res://Scenes/Fish.tscn")
+	var fish = fish_scene.instance()
+	add_child(fish)
 	pass
 
 
 
 
-func _process(delta):
+func _process(_delta):
 		# Spawn food on left click
 	if Input.is_action_just_pressed("spawn_food"):
-		var scene = load("res://Scenes/Food.tscn")
-		var food = scene.instance()
+		var food_scene = load("res://Scenes/Food.tscn")
+		var food = food_scene.instance()
 		# set food position to mouse position
 		var mouse_position = get_viewport().get_mouse_position()
 		food.position = mouse_position

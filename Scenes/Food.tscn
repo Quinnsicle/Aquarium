@@ -13,3 +13,8 @@ texture = ExtResource( 2 )
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 position = Vector2( 9.96185, 10.1022 )
 polygon = PoolVector2Array( 54.81, 55.0032, 54.389, -10.2399, -10.0122, -9.819, -9.59131, 54.442 )
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 10.0
+autostart = true
+[connection signal="ready" from="." to="." method="_on_Food_ready"]
