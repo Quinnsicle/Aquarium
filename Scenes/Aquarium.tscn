@@ -32,4 +32,10 @@ polygon = PoolVector2Array( 0, 600, 0, -24, -32, -24, -32, 600 )
 [node name="Right Side" type="CollisionPolygon2D" parent="Outside"]
 position = Vector2( 1056, 0.000183105 )
 polygon = PoolVector2Array( 0, 600, 0, -24.0002, -32, -24.0002, -32, 600 )
+
+[node name="Food Timer" type="Timer" parent="."]
+wait_time = 5.0
+one_shot = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
