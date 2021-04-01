@@ -5,7 +5,6 @@ func _ready():
 	var fish_scene = load("res://Scenes/Fish.tscn")
 	var fish = fish_scene.instance()
 	add_child(fish)
-	pass
 
 
 
